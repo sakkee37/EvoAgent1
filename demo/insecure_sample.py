@@ -28,3 +28,8 @@ def parse(value):
 
 
 print("debug", DB_PASSWORD)                 # debug print
+
+
+def unsafe_yaml_load(payload):
+    import yaml
+    return yaml.load(payload, Loader=yaml.Loader)   # unsafe deserialization
